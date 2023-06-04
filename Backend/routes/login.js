@@ -4,6 +4,9 @@ const router = express.Router();
 //controllers 
 const { login } = require('../controllers/login')
 
-router.post('/login', login);
+//middleware
+const { auth } = require('../middleware/auth')
+
+router.post('/login', auth, login);
 
 module.exports = router;
