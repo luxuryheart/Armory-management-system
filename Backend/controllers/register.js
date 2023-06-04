@@ -28,12 +28,12 @@ exports.register = async (req, res) => {
                 user.password = await bcrypt.hash(password, salt);
                 await user.save();
 
-               return res.json({ msg: "register Success!!!" });
+               return res.json({ msg: "Register Success!!!" , Status:'Success'});
             } else {
-                res.status(400).send('Email Already exists!!');
+                res.json({Status:400, Error:'Email Already exists!!'});
             }
         } else {
-            res.status(400).send('User Already exists!!');
+            res.json({Status:400, Error:'User Already exists!!'});
         }    
 
     } catch(err) {

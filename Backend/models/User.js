@@ -2,11 +2,6 @@
 const mongoose = require('mongoose')
 
 const userShema = new mongoose.Schema({
-    // _id:{
-    //     type: Number,
-    //     primarykey:true,
-    //     autoIncrement:true
-    // },
     firstname:{
         type: String,
         required: true

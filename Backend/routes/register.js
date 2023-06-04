@@ -7,6 +7,6 @@ const { register } = require('../controllers/register')
 //middleware
 const { auth } = require('../middleware/auth')
 
-router.post('/register', auth, register);
+router.post('/register', register);
 
 module.exports = router;
